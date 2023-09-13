@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>web</title>
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header class = "header">
+        <nav class ="navbar">
+            <div class = "logo">
+                <img src = "./images/logo.png">
+            </div>
+            <img src = "./images/title.png" id = "title">
+            <div class = "nav-links">
+                <button class="nav-button"><a href="https://www.linkedin.com/company/phoenix-association-bphc/?originalSubdomain=in">Follow us</a></button>
+                <button class="nav-button"><a href="#">Contact us</a></button>
+            </div>
+        </nav>
+    </header>
+    <section class="workshops">
+        <h1 style = "font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">On going workshops...</h1>
+        <div class="workshop-gallery">
+            <div class="workshop" onclick="toggleWorkshopDetails(this)">
+                <img src="./images/img1.jpg" alt="Workshop 1">
+                <h3>Workshop 1</h3>
+                <div class="workshop-details" style="display: none;">
+                    <p>Unlock the Power of Computer Vision with OpenCV! Join us for an immersive 2-day workshop and learn how to manipulate images and videos using the world's most popular open-source computer vision library. #OpenCVWorkshop #ComputerVision #ImageProcessing #AI #MachineLearning </p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+            <div class="workshop" onclick="toggleWorkshopDetails(this)">
+                <img src="./images/img2.png" alt="Workshop 2">
+                <h3>Workshop 2</h3>
+                <div class="workshop-details" style="display: none;">
+                    <p>Are you a computer geek wanting to learn the cool, enticing tech behind image analysis? Or just a python newbie, wanting to exploring the vast ocean of coding? Then this is the right event for you!
+                        PHoEnix presents OpenCV with Python Workshop to take you from basics to advanced topics of OpenCV. CV is a hot and radically growing technology right now, but it can be a daunting space for newcomers. But do not worry! All your doubts and queries would be taken care of in this very interactive and intimate session</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+            <div class="workshop" onclick="toggleWorkshopDetails(this)">
+                <img src="./images/img3.jpg" alt="Workshop 3">
+                <h3>Workshop 3</h3>
+                <div class="workshop-details" style="display: none;">
+                    <p>PHoEnix is conducting a workshop on Image Processing by Dr. P K Thiruvikraman Sir. The workshop will be extremely beneficial for those who want to explore the world of Image Processing and its applications. The First Session will cover the basics of Image Processing and MATLAB. The Second Session will be the implementation of taught concepts in MATLAB.</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function toggleWorkshopDetails(workshop) {
+            const details = workshop.querySelector('.workshop-details');
+            if (details.style.display === 'none' || details.style.display === '') {
+                details.style.display = 'block';
+            } else {
+                details.style.display = 'none';
+            }
+        }
+    </script>
+    
+    <footer class="footer">
+        <div class="footer-content">
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">More</a></li>
+            </ul>
+        </div>
+        <div class="social-media">
+            <a href="https://www.facebook.com/phoenix.bphc/"><i class='bx bxl-facebook-circle' ></i></a>
+            <a href="https://www.linkedin.com/company/phoenix-association-bphc/?originalSubdomain=in"><i class='bx bxl-linkedin'></i></a>
+            <a href="https://www.instagram.com/phoenixbphc/"><i class='bx bxl-instagram' ></i></a>
+        </div>
+    </footer>
+    
+</body>
+</html>
